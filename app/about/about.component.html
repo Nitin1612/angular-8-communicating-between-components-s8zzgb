@@ -1,0 +1,12 @@
+<div class="card mb-3">
+    <h5 class="card-header">Customer</h5>
+    <div class="card-body">
+    <input type="text" (input)="inInput($event.target.value)" placeholder="Your Name"><br><br>
+    <input type="text" (input)="onInput($event.target.value)" placeholder="Type your Message"><br><br>
+    <button (click)="sendMessage()" class="btn btn-primary mr-2">Send Message</button>
+    
+</div>
+    <div class="card-body">
+        <div *ngFor="let message of messages" class="alert alert-sm alert-info">{{message.text}}</div>
+    </div>
+</div>
